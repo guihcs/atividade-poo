@@ -6,20 +6,14 @@ public class Exercicio1 {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        //1. Calcule a média de 3 notas
 
-        System.out.println("Quantas notas você quer?");
-        int count = Integer.parseInt(scanner.nextLine());
-        double total = 0;
+        double n1 = 5;
+        double n2 = 6;
+        double n3 = 7;
 
-        for (int i = 0; i < count; i++) {
-            System.out.println("Digite a nota " + (i + 1) + ": ");
-            double nota = Double.parseDouble(scanner.nextLine());
-            total += nota;
-        }
+        double result = (n1 + n2 + n3) / 3.0;
 
-        double media = total / count;
-
-        System.out.println("Media: " + media);
+        System.out.println(result);
     }
 }

@@ -6,19 +6,15 @@ public class Exercicio1 {
 
 
     public static void main(String[] args) {
+        //1. Faça um programa que calcule uma simulação de renda fixa ex: (valor inicial, taxa, tempo -> resultado)
+        double initial = 1000;
+        //taxa ao ano
         double tax = 0.05;
+        //tempo em anos
         int time = 3;
 
-        double[] bank = {1000, 2000, 500, 700, 20};
+        double result = initial * Math.pow(1 + tax, time);
 
-        for (int i = 0; i < bank.length; i++) {
-            System.out.println("Conta " + i + " saldo " + bank[i]);
-            for (int j = 0; j < time; j++) {
-                bank[i] *= 1 + tax;
-                System.out.println("Ano " + (j + 1) + " saldo " + bank[i]);
-            }
-        }
-
-        System.out.println(Arrays.toString(bank));
+        System.out.println(result);
     }
 }
